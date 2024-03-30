@@ -39,8 +39,8 @@ body{
   background-color: var(--neutral-300);
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
-
 
 .header{
   width: 100vw;
@@ -63,9 +63,9 @@ li{
 }
 
 .cart{
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
+  position: absolute;
+  top:16px;
+  right: 32px;
 }
 
 .cart i{
@@ -97,6 +97,7 @@ li{
   position: relative;
   display: flex;
   gap: 1.125rem;
+  width: auto;
 }
 
 .input-field{
@@ -141,7 +142,7 @@ li{
 
 .section-menu{
   padding: 3rem 4rem;
-  width:100vw;
+  width:100%;
   height: auto;
 }
 
@@ -168,6 +169,27 @@ li{
   background-color: var(--primary)
 }
 
+.tabs{
+  width: 3rem;
+  height: 3rem;
+  margin-left: 0.75rem;
+  font-size: var(--text-base);
+  cursor: pointer;
+  border: none;
+  background-color: var(--neutral-200);
+  color: var(--neutral-0);
+  border-radius: 0.75rem;
+}
+
+.tabs.active{
+  background-color: var(--primary);
+}
+
+.tabs:hover{
+  background-color: var(--primary);
+  transition: background-color .3s ease-in-out;
+}
+
 .menu{
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -175,16 +197,20 @@ li{
 }
 
 .card-item{
-  display: flex;
+  display: none;
   background-color: var(--neutral-200);
   border-radius: 0.75rem;
   padding: 0.75rem;
   gap: 1rem;
 }
 
+.card-item.show{
+  display: flex;
+}
+
 .img-item img{
-  width: 200px;
-  height: 220px;
+  width: 220px;
+  height: 248px;
   object-fit: cover;
   border-radius: 0.75rem;
 }
@@ -192,7 +218,7 @@ li{
 .content-item{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 1.75rem;
 }
 
 .title-item h6{
@@ -309,4 +335,48 @@ li{
 
 .copyright span{
   color: var(--primary);
+}
+
+@media(max-width:768px){
+  .cart{
+    right: 16px;
+  }
+  .section-menu{
+    padding: 4rem 1.75rem;
+  }
+
+  .menu{
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .card-item{
+    flex-direction: column;
+  }
+
+  .img-item img{
+    width: 100%;
+    height:320px;
+  }
+
+  .section-footer{
+    padding: 2rem 1.75rem;
+  }
+  .section-footer .flex{
+    flex-direction: column;
+    gap: 2rem;
+    width:100%;
+  }
+}
+
+@media(min-width: 769px) and (max-width: 1023px){
+  .cart{
+    right: 52px;
+  }
+  .card-item{
+    flex-direction: column;
+  }
+
+  .img-item img{
+    width: 100%;
+  }
 }

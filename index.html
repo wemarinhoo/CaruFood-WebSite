@@ -23,9 +23,17 @@
     <div class="input-box">
       <input type="text" placeholder="Buscar" class="input-field">
       <button type="button" class="filter-button"><i class="fa-solid fa-sliders"></i></button>
+
       <div class="icon-search">
         <i class="fa-solid fa-magnifying-glass"></i>
       </div>
+
+      <!-- <ul class="options-filter">
+        <li><input type="checkbox" name="" id=""></li>
+        <li><input type="checkbox" name="" id=""></li>
+        <li><input type="checkbox" name="" id=""></li>
+        <li><input type="checkbox" name="" id=""></li>
+      </ul> -->
     </div>
   </header>
 
@@ -36,12 +44,13 @@
       </div>
 
       <div class="tabs-navigator">
-        
+        <button type="button" class="tabs active" content-id="foods">1</button>
+        <button type="button" class="tabs" content-id="drinks">2</button>
       </div>
     </div>
 
     <div class="menu">
-      <div class="card-item">
+      <div class="card-item" data-content-id="foods">
         <div class="img-item">
           <img src="/src/image/X-CaruFood.jpg" alt="Imagem Hamburguer X-CaruFood">
         </div>
@@ -52,7 +61,8 @@
             <small>200g</small>
           </div>
           
-          <p class="content-text">Carne de hambúrguer de qualidade, Fatias de bacon crocante, Fatias de abacate maduro, Queijo cheddar derretido e Maionese de alho</p>
+          <p class="content-text">Carne de hambúrguer de qualidade, Fatias de bacon crocante, Fatias de abacate maduro, Queijo cheddar derretido e Maionese de alho
+          </p>
 
           <div class="price-cart">
             <span class="price">R$35,00</span>
@@ -61,7 +71,7 @@
         </div>
       </div>
 
-      <div class="card-item">
+      <div class="card-item" data-content-id="foods">
         <div class="img-item">
           <img src="/src/image/X-Agreste.jpg" alt="Imagem do Hamburguer X-Agreste">
         </div>
@@ -81,7 +91,7 @@
         </div>
       </div>
 
-      <div class="card-item">
+      <div class="card-item" data-content-id="foods">
         <div class="img-item">
           <img src="/src/image/X-Pernambuco.jpg" alt="Imagem do Hamburguer X-Pernambuco">
         </div>
@@ -101,7 +111,7 @@
         </div>
       </div>
 
-      <div class="card-item">
+      <div class="card-item" data-content-id="foods">
         <div class="img-item">
           <img src="/src/image/X-Nordeste.jpg" alt="Imagem do Hamburguer X-Nordeste">
         </div>
@@ -121,7 +131,7 @@
         </div>
       </div>
 
-      <div class="card-item">
+      <div class="card-item" data-content-id="foods">
         <div class="img-item">
           <img src="/src/image/X-Sertão.jpg" alt="Imagem do Hamburguer X-Sertão">
         </div>
@@ -141,7 +151,7 @@
         </div>
       </div>
 
-      <div class="card-item">
+      <div class="card-item" data-content-id="foods">
         <div class="img-item">
           <img src="/src/image/X-Zona_Mata.jpg" alt="Imagem do Hamburguer X-Zona da Mata">
         </div>
@@ -156,6 +166,130 @@
 
           <div class="price-cart">
             <span class="price">R$15,00</span>
+            <button type="button"><i class="fa-solid fa-cart-plus"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-item" data-content-id="drinks">
+        <div class="img-item">
+          <img src="/src/image/coca2L.svg" alt="Imagem da Coca-Cola 2L">
+        </div>
+      
+        <div class="content-item">
+          <div class="title-item">
+            <h6>Coca-Cola</h6>
+            <small>2L</small>
+          </div>
+      
+          <p class="content-text">Água carbonatada, Açúcar, Extrato de folha de coca, Cafeína, Ácido fosfórico, Caramelo, Extrato de noz de cola e Aromatizantes</p>
+      
+          <div class="price-cart">
+            <span class="price">R$12,00</span>
+            <button type="button"><i class="fa-solid fa-cart-plus"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-item" data-content-id="drinks">
+        <div class="img-item">
+          <img src="/src/image/coca1L.svg" alt="Imagem da Coca-Cola 1L">
+        </div>
+      
+        <div class="content-item">
+          <div class="title-item">
+            <h6>Coca-Cola</h6>
+            <small>1L</small>
+          </div>
+      
+          <p class="content-text">Água carbonatada, Açúcar, Extrato de folha de coca, Cafeína, Ácido fosfórico, Caramelo,
+            Extrato de noz de cola e Aromatizantes</p>
+      
+          <div class="price-cart">
+            <span class="price">R$8,00</span>
+            <button type="button"><i class="fa-solid fa-cart-plus"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-item" data-content-id="drinks">
+        <div class="img-item">
+          <img src="/src/image/guarana2L.svg" alt="Imagem do Guaraná 2L">
+        </div>
+      
+        <div class="content-item">
+          <div class="title-item">
+            <h6>Guaraná Antarctica</h6>
+            <small>2L</small>
+          </div>
+      
+          <p class="content-text">Água gaseificada, Xarope de guaraná, Açúcar, Ácido cítrico, Aromatizantes naturais e artificiais</p>
+      
+          <div class="price-cart">
+            <span class="price">R$12,00</span>
+            <button type="button"><i class="fa-solid fa-cart-plus"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-item" data-content-id="drinks">
+        <div class="img-item">
+          <img src="/src/image/coca350ml.jpg" alt="Imagem da Coca-Cola 350ML">
+        </div>
+      
+        <div class="content-item">
+          <div class="title-item">
+            <h6>Coca-Cola</h6>
+            <small>350ml</small>
+          </div>
+      
+          <p class="content-text">Água carbonatada, Açúcar, Extrato de folha de coca, Cafeína, Ácido fosfórico, Caramelo,
+            Extrato de noz de cola e Aromatizantes</p>
+      
+          <div class="price-cart">
+            <span class="price">R$5,00</span>
+            <button type="button"><i class="fa-solid fa-cart-plus"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-item" data-content-id="drinks">
+        <div class="img-item">
+          <img src="/src/image/guarana350ml.svg" alt="Imagem do Guaraná 350ML">
+        </div>
+      
+        <div class="content-item">
+          <div class="title-item">
+            <h6>Guaraná Antarctica</h6>
+            <small>350ml</small>
+          </div>
+      
+          <p class="content-text">Água carbonatada, Açúcar, Extrato de folha de coca, Cafeína, Ácido fosfórico, Caramelo,
+            Extrato de noz de cola e Aromatizantes</p>
+      
+          <div class="price-cart">
+            <span class="price">R$5,00</span>
+            <button type="button"><i class="fa-solid fa-cart-plus"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-item" data-content-id="drinks">
+        <div class="img-item">
+          <img src="/src/image/fanta350ml.svg" alt="Imagem da Fanta 350ML">
+        </div>
+      
+        <div class="content-item">
+          <div class="title-item">
+            <h6>Fanta</h6>
+            <small>350ml</small>
+          </div>
+      
+          <p class="content-text">Água carbonatada, Açúcar, Aromatizantes naturais e artificiais, Ácido cítrico, 
+          Conservantes, Antioxidante, Corantes naturais e artificiais</p>
+      
+          <div class="price-cart">
+            <span class="price">R$5,00</span>
             <button type="button"><i class="fa-solid fa-cart-plus"></i></button>
           </div>
         </div>
