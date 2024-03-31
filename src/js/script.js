@@ -17,3 +17,18 @@ function tabClicked(tab){
 
  cards.forEach(card => card.classList.add('show'));
 }
+
+const btnOpenCart = document.querySelector('.cart')
+const modal = document.querySelector('.modal-cart')
+const body = document.querySelector('body')
+const btnCloseCart = document.querySelector('.button-close-modal')
+
+btnOpenCart.addEventListener('click', () => {
+  modal.classList.toggle('view')
+  body.classList.toggle('no-scroll')
+})
+
+btnCloseCart.addEventListener('click', () => {
+  modal.classList.toggle('view')
+  body.classList.toggle('no-scroll')
+})
