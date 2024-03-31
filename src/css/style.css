@@ -253,7 +253,7 @@ span, p, small{
 .icon-cupom{
   position: absolute;
   font-size: var(--text-base);
-  top: 12px;
+  top: 11px;
   left: 16px;
 }
 
