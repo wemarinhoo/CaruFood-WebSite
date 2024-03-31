@@ -96,7 +96,7 @@ span, p, small{
   z-index: 10;
   padding: 2rem;
   width: 480px;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -459,7 +459,7 @@ span, p, small{
 .content-item{
   display: flex;
   flex-direction: column;
-  gap: 1.75rem;
+  justify-content: space-between;
 }
 
 .title-item h6{
@@ -615,6 +615,14 @@ span, p, small{
     flex-direction: column;
   }
 
+  .content-item{
+    gap: 1.75rem;
+  }
+
+  .cart-container{
+    width: 100%;
+  }
+
   .img-item img{
     width: 100%;
     height:320px;
@@ -636,6 +644,12 @@ span, p, small{
   }
   .card-item{
     flex-direction: column;
+    height:560px;
+  }
+
+  .content-item{
+    height: 100%;
+    justify-content: space-between;
   }
 
   .img-item img{
