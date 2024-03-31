@@ -89,6 +89,26 @@ span, p, small{
   flex-direction: column;
   gap: 2rem;
   box-shadow: rgba(0, 0, 0, 0.25) -10px 0px 10px, rgba(0, 0, 0, 0.12) -5px 0px 5px, rgba(0, 0, 0, 0.12) -2px 0px 2px, rgba(0, 0, 0, 0.17) -5px 0px 5px, rgba(0, 0, 0, 0.09) -2px 0px 2px;
+  overflow-y: auto;
+  scrollbar-width: large;
+  scrollbar-color:  var(--primary) var(--neutral-200) ;
+}
+
+.container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background: var(--primary);
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+    opacity: .6;
+    transition: opacity .3s ease-in-out
 }
 
 .title-cart{
@@ -125,6 +145,11 @@ span, p, small{
 
 .button-close-modal i{
   font-size: var(--text-base);
+}
+
+.button-close-modal:hover{
+  opacity: .6;
+  transition: opacity .3s ease-in-out;
 }
 
 .items-cart{
@@ -165,6 +190,10 @@ span, p, small{
   cursor: pointer;
 }
 
+.remove:hover{
+  opacity: .6;
+  transition: opacity .3s ease-in-out;
+}
 .title-delivery h6, span{
   font-size: var(--text-base);
 }
@@ -177,9 +206,90 @@ span, p, small{
   width: 100%;
   background-color: var(--neutral-200);
   height: 200px;
-  margin: .25rem 0 .5rem 0;
+  margin: .25rem 0 1rem 0;
   border-radius: 0.75rem;
 }
+
+.input-cupom{
+  position: relative;
+  display: flex;
+  width: 100%;
+  gap: 1.125rem;
+}
+
+.input-field-cupom{
+  width:75%;
+  background-color: var(--neutral-200);
+  outline: none;
+  border: 2px solid transparent;
+  padding: .5rem 3rem;
+  font-size: var(--text-base);
+  color: var(--neutral-100);
+  border-radius: 0.75rem;
+  font-weight: var(--font-regular);
+}
+
+.input-field-cupom:focus{
+  border-color: var(--primary);
+  transition: border-color .3s ease-in-out;
+}
+
+.input-cupom button{
+  width: 25%;
+  font-size: var(--text-base);
+  border-radius: 0.75rem;
+  background-color: var(--primary);
+  border: none;
+  color: var(--neutral-0);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.input-cupom button:hover{
+  opacity: .6;
+  transition: opacity .3s ease-in-out;
+}
+
+.icon-cupom{
+  position: absolute;
+  font-size: var(--text-base);
+  top: 12px;
+  left: 16px;
+}
+
+.informations-purchase{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.price-purchase, .price-delivery{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-purchase span, .price-delivery span{
+  color: var(--neutral-0);
+}
+
+.button-purchase button{
+  width: 100%;
+  padding: .5rem;
+  background-color: var(--primary);
+  color: var(--neutral-0);
+  border: none;
+  text-transform: uppercase;
+  border-radius: .75rem;
+  font-size: var(--text-base);
+  cursor: pointer;
+}
+
+.button-purchase button:hover{
+  opacity: .6;
+  transition: opacity .3s ease-in-out;
+}
+
 .cart{
   position: absolute;
   top:16px;
