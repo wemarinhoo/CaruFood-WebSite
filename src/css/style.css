@@ -311,7 +311,19 @@ span, p, small{
 .cart{
   position: absolute;
   top:16px;
-  right: 32px;
+  right: 36px;
+}
+
+.cart:after{
+  content: "2";
+  top: -8px;
+  right: -16px;
+  position: absolute;
+  padding: .5rem .75rem;
+  background-color: var(--primary);
+  color: var(--neutral-0);
+  border-radius: .75rem;
+  display: none;
 }
 
 .cart i{
@@ -377,6 +389,40 @@ span, p, small{
 
 .filter-button i{
   font-size: var(--text-medium);
+}
+
+.menu-filter{
+  position: absolute;
+  top: 80px;
+  right: 0;
+  background-color: var(--primary);
+  border-radius: .75rem;
+  width: 200px;
+  padding: .75rem;
+  gap: 1.5rem;
+  flex-direction: column;
+  display: none;
+  animation: open-menu-filter .3s ease-in-out;
+}
+
+.menu-filter.view{
+  display: flex;
+}
+
+.options-filter{
+  color: var(--neutral-0);
+  cursor: pointer;
+  display: flex;
+  gap: .75rem;
+  width: 100%;
+  background-color: var(--primary);
+}
+
+
+
+.options-filter:hover{
+  opacity: .6;
+  transition: opacity .3s ease-in-out;
 }
 
 .icon-input{
@@ -479,7 +525,7 @@ span, p, small{
 
 .content-text{
   font-size: var(--text-base);
-  color: var(--neutral-100);
+  color: var(--neutral-100); 
 }
 
 .price-cart{
@@ -545,6 +591,16 @@ span, p, small{
     opacity: 1;
   }
   
+}
+
+@keyframes open-menu-filter{
+  from{
+    transform: translateY(-16px);
+  }
+
+  to{
+    transform: translateY(0);
+  }
 }
 
 @media(max-width:768px){

@@ -32,3 +32,15 @@ btnCloseCart.addEventListener('click', () => {
   modal.classList.toggle('view')
   body.classList.toggle('no-scroll')
 })
+
+const btnFilter = document.querySelector('.filter-button')
+const menuFilter = document.querySelector('.menu-filter')
+const optionsFilter = document.querySelectorAll('.options-filter')
+
+btnFilter.addEventListener('click', () => {
+  menuFilter.classList.toggle('view')
+})
+
+optionsFilter.addEventListener('click', () => {
+  menuFilter.classList.toggle('view')
+})
