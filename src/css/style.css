@@ -356,8 +356,8 @@ span, p, small{
 }
 
 .logo{
-  width: 480px;
-  height: 480px;
+  width: 35%;
+  height: 35%;
   margin-top: -8rem;
 }
 
@@ -626,6 +626,9 @@ span, p, small{
     padding: 1.75rem;
   }
 
+  .logo{
+
+  }
   .input-box{
     width: 100%;
   }
