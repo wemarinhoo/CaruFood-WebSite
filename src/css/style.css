@@ -621,6 +621,9 @@ span, p, small{
 }
 
 @media(max-width:768px){
+  .header{
+    padding: 1.75rem;
+  }
 
   .input-box{
     width: 100%;
@@ -654,11 +657,11 @@ span, p, small{
   }
 
   .modal-cart{
-    width: 100vw;
+    width: 100%;
   }
 
   .cart-container{
-    width: 100vw;
+    width: 100%;
   }
 
   .img-item img{
