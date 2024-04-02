@@ -626,6 +626,14 @@ span, p, small{
     width: 100%;
   }
 
+  .input-box .input-field{
+    width:90%;
+  }
+
+  .input-box .filter-btn{
+    width: 10%;
+  }
+
   .cart{
     right: 16px;
   }
