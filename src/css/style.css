@@ -639,6 +639,10 @@ span, p, small{
     gap: 1.75rem;
   }
 
+  .modal-cart{
+    width: 100vw;
+  }
+  
   .cart-container{
     width: 100%;
   }
