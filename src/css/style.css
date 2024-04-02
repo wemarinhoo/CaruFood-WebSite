@@ -41,7 +41,7 @@ body{
   background-color: var(--neutral-300);
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+  overflow-x: none;
 }
 
 body.no-scroll{
@@ -642,7 +642,7 @@ span, p, small{
   .modal-cart{
     width: 100vw;
   }
-  
+
   .cart-container{
     width: 100%;
   }
