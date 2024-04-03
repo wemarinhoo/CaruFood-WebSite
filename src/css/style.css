@@ -154,13 +154,28 @@ span, p, small{
   text-align: center;
   border: none;
   border-radius: 0.75rem;
+  font-size: var(--text-base);
+  margin-left: .5rem;
 }
 
-.button-close-modal i{
+.button-clear-cart{
+  background-color: var(--tertiary); 
+  height: 2.5rem;
+  width: 2.5rem;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  border-radius: 0.75rem;
   font-size: var(--text-base);
 }
 
+
 .button-close-modal:hover{
+  opacity: .6;
+  transition: opacity .3s ease-in-out;
+}
+
+.button-clear-cart:hover{
   opacity: .6;
   transition: opacity .3s ease-in-out;
 }
