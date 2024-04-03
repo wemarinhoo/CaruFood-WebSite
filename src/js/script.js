@@ -77,7 +77,7 @@ function addToCart(name, price){
 function updateCart(){
  cartItems.innerHTML = ""
  let total = 0
- let totalQuantity = 0
+ let totalQuantity = ""
 
  cart.forEach(item => {
     const cartItemElement = document.createElement('div')
@@ -101,14 +101,14 @@ function updateCart(){
     totalQuantity += item.quantity
 
     cartItems.appendChild(cartItemElement)
+ });
 
-     if(totalQuantity > 0){
+      if(totalQuantity > 0){
         cartCounter.innerHTML = totalQuantity
         cartCounter.style.display = "flex"
  }   else{
         cartCounter.style.display = "none"
  }
- });
 
  totalPurchase.textContent = total.toLocaleString('pt-BR', {
   style: 'currency',
