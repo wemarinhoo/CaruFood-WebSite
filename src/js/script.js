@@ -78,7 +78,7 @@ function addToCart(name, price){
 function updateCart(){
  cartItems.innerHTML = ""
  let total = 0
- let totalQuantity = ""
+ let totalQuantity = 0
 
  cart.forEach(item => {
     const cartItemElement = document.createElement('div')
