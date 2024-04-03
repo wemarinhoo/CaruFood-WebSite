@@ -10,6 +10,7 @@ const btnAddCart = document.querySelector('.add-cart')
 const totalPurchase = document.querySelector('.purchase-total')
 const cartItems = document.querySelector('.items-cart')
 const menuItems = document.querySelector('.menu')
+const btnClearCart = document.querySelector('.button-clear-cart')
 
 let cart = []
 
@@ -139,3 +140,8 @@ function removeItemCart(name){
   cart.splice(index, 1)
   updateCart()
 }
+
+btnClearCart.addEventListener('click', () => {
+  cart = []
+  updateCart()
+})
