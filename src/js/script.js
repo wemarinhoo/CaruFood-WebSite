@@ -42,6 +42,7 @@ btnOpenCart.addEventListener('click', () => {
 
 modal.addEventListener('click', () => {
   modal.classList.toggle('view')
+  body.classList.toggle('no-scroll')
 })
 
 btnCloseCart.addEventListener('click', () => {
