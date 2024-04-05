@@ -81,7 +81,6 @@ span, p, small{
   display: none;
   align-items: center;
   justify-content: flex-end;
-  z-index: 1;
 }
 
 .modal-cart.view{
@@ -698,6 +697,7 @@ span, p, small{
     width: 70%;
     height: 70%;
   }
+
   .cart{
     right: 52px;
   }
