@@ -628,11 +628,10 @@ span, p, small{
 
 @keyframes open-menu-filter{
   from{
-    transform: translateY(-16px);
+    opacity: 0
   }
-
   to{
-    transform: translateY(0);
+    opacity: 1;
   }
 }
 
@@ -679,10 +678,12 @@ span, p, small{
 
   .modal-cart{
     width: 100%;
+    z-index: 1;
   }
 
   .cart-container{
     width: 100%;
+    z-index: 2;
   }
 
   .img-item img{
