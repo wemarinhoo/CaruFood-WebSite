@@ -12,13 +12,15 @@ const totalPurchase = document.querySelector('.purchase-total')
 const cartItems = document.querySelector('.items-cart')
 const menuItems = document.querySelector('.menu')
 const btnClearCart = document.querySelector('.button-clear-cart')
-const toast = document.querySelector('.toast')
+const inputTicket = document.querySelector('.input-field-ticket')
+const btnActiveDiscount = document.querySelector('.btn-active-ticket')
 
 let cart = []
+let totalPrice = 0
 
 tabs.forEach(tab => tab.addEventListener('click', () => tabClicked(tab)))
 
-tabClicked(tabs[0]);
+tabClicked(tabs[0])
 
 function tabClicked(tab){
  tabs.forEach(tab => tab.classList.remove('active'))
@@ -41,7 +43,9 @@ btnOpenCart.addEventListener('click', () => {
 })
 
 modal.addEventListener('click', (e) => {
-  if(e.target.className.includes('modal-cart')){
+  const target = e.target.className.includes('modal-cart')
+  
+  if(target){
     modal.classList.toggle('view')
     body.classList.toggle('no-scroll')
   }
@@ -66,8 +70,6 @@ menuItems.addEventListener('click', (e) => {
     const price = parseFloat(parentBtn.getAttribute('data-price'))
     addToCart(name, price)
   }
-
-  
 })
 
 function addToCart(name, price){
@@ -100,7 +102,7 @@ function updateCart(){
         <div class="info-item">
           <h6>${item.name}</h6>
           <span>Quantidade: ${item.quantity}</span>
-          <span id="price-item">R$${(item.price * item.quantity).toFixed(2)}</span>
+          <span id="price-item">R$${(item.price * item.quantity)}</span>
         </div>
 
         <div class="remove">
@@ -126,6 +128,8 @@ function updateCart(){
   style: 'currency',
   currency: 'BRL'
  })
+
+ totalPrice = total
 }
 
 cartItems.addEventListener('click', (e) => {
@@ -156,3 +160,28 @@ btnClearCart.addEventListener('click', () => {
   cart = []
   updateCart()
 })
+
+function appDiscount(){
+  inputTicket.addEventListener('input', (e) => {
+    const valueInput = e.target.value
+    const ticket = "CF10"
+
+    if(valueInput === ticket){
+      const discount = totalPrice * 0.10
+      const valueDiscount = totalPrice - discount
+      totalPurchase.textContent = valueDiscount.toLocaleString('pt-BR', {
+        style: 'currency',
+        currency: 'BRL'
+      }) + "(-10%)"
+    } else {
+      valueDiscount = totalPrice
+      totalPurchase.textContent = valueDiscount.toLocaleString('pt-BR', {
+        style: 'currency',
+        currency: 'BRL'
+      })
+    }
+  })
+}
+
+
+btnActiveDiscount.addEventListener('click', appDiscount())
