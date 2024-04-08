@@ -249,14 +249,14 @@ span, p, small{
   border-radius: 0.75rem;
 }
 
-.input-cupom{
+.input-ticket{
   position: relative;
   display: flex;
   width: 100%;
   gap: 1.125rem;
 }
 
-.input-field-cupom{
+.input-field-ticket{
   width:75%;
   background-color: var(--neutral-200);
   outline: none;
@@ -268,12 +268,12 @@ span, p, small{
   font-weight: var(--font-regular);
 }
 
-.input-field-cupom:focus{
+.input-field-ticket:focus{
   border-color: var(--primary);
   transition: border-color .3s ease-in-out;
 }
 
-.input-cupom button{
+.input-ticket button{
   width: 25%;
   font-size: var(--text-base);
   border-radius: 0.75rem;
@@ -284,12 +284,12 @@ span, p, small{
   cursor: pointer;
 }
 
-.input-cupom button:hover{
+.input-ticket button:hover{
   opacity: .6;
   transition: opacity .3s ease-in-out;
 }
 
-.icon-cupom{
+.icon-ticket{
   position: absolute;
   font-size: var(--text-base);
   top: 11px;
