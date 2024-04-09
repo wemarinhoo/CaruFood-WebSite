@@ -187,6 +187,60 @@ function appDiscount(){
 
 btnActiveDiscount.addEventListener('click', appDiscount())
 
+let map, infoWindow;
+
+function initMap() {
+  map = new google.maps.Map(document.querySelector(".adress"), {
+    center: { lat: -8.0476, lng: -34.8770 },
+    zoom: 6,
+    mapTypeControl: false,
+    streetViewControl: false
+  });
+  infoWindow = new google.maps.InfoWindow();
+
+  const locationButton = document.createElement("button");
+
+  locationButton.textContent = "Obter localização atual";
+  locationButton.classList.add("custom-map-control-button");
+  map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
+  locationButton.addEventListener("click", () => {
+    
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const pos = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude,
+          };
+
+          infoWindow.setPosition(pos);
+          infoWindow.setContent("Location found.");
+          infoWindow.open(map);
+          map.setCenter(pos);
+        },
+        () => {
+          handleLocationError(true, infoWindow, map.getCenter());
+        }
+      );
+    } else {
+      
+      handleLocationError(false, infoWindow, map.getCenter());
+    }
+  });
+}
+
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+  infoWindow.setPosition(pos);
+  infoWindow.setContent(
+    browserHasGeolocation
+      ? "Error: The Geolocation service failed."
+      : "Error: Your browser doesn't support geolocation."
+  );
+  infoWindow.open(map);
+}
+
+window.initMap = initMap
+
 document.addEventListener('DOMContentLoaded', () => {
   Toastify({
     text: '🎉 10% de desconto em sua primeira compra! Use o código "CF10". Aproveite',
