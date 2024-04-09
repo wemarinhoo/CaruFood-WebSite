@@ -186,3 +186,18 @@ function appDiscount(){
 }
 
 btnActiveDiscount.addEventListener('click', appDiscount())
+
+document.addEventListener('DOMContentLoaded', () => {
+  Toastify({
+    text: '🎉 10% de desconto em sua primeira compra! Use o código "CF10". Aproveite',
+    duration: 5000,
+    close: true,
+    className: 'toast',
+    gravity: "top",
+    position: "left",
+    stopOnFocus: true,
+    style: {
+      background: "#181818",
+    },
+  }).showToast()
+})
