@@ -54,6 +54,8 @@ modal.addEventListener('click', (e) => {
 btnCloseCart.addEventListener('click', () => {
   modal.classList.toggle('view')
   body.classList.toggle('no-scroll')
+
+  inputTicket.value = ""
 })
 
 btnFilter.addEventListener('click', () => {
@@ -166,7 +168,7 @@ function appDiscount(){
     const valueInput = e.target.value
     const ticket = "CF10"
 
-    if(valueInput === ticket){
+    if(valueInput === ticket && totalPrice > 0){
       const discount = totalPrice * 0.10
       const valueDiscount = totalPrice - discount
       totalPurchase.textContent = valueDiscount.toLocaleString('pt-BR', {
@@ -182,6 +184,5 @@ function appDiscount(){
     }
   })
 }
-
 
 btnActiveDiscount.addEventListener('click', appDiscount())
